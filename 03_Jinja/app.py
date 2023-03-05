@@ -38,3 +38,18 @@ def render_page(company):
     # company = "Microsoft"
     return render_template("conditionals_basics.html",
                            company=company)
+    
+@app.route("/loops/")
+def render_loops():
+    planets = [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupyter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+    ]
+    return render_template("for_loops.html",
+                           planets=planets)
