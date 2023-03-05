@@ -19,3 +19,16 @@ def render_expression():
                   first_name="Captain",
                   last_name="Marvel")
     return render_template("expression.html",**kwargs)
+
+@app.route("/data-structures/")
+def render_data_structure():
+    movies = list("A B C".split())
+    
+    car = {
+        "brand": "Tesla",
+        "model": "Roadstar",
+        "year": "2020",
+    }
+    return render_template("data_structure.html",
+                           movies=movies,
+                           car=car)
