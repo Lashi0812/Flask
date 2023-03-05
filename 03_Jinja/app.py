@@ -32,3 +32,9 @@ def render_data_structure():
     return render_template("data_structure.html",
                            movies=movies,
                            car=car)
+    
+@app.route("/conditional-basic/<string:company>/")
+def render_page(company):
+    # company = "Microsoft"
+    return render_template("conditionals_basics.html",
+                           company=company)
